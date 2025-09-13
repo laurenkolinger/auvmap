@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,65 +13,145 @@
             margin: 0;
             padding: 40px;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         .container {
+            max-width: 800px;
+            margin: 0 auto;
             background: rgba(15, 15, 15, 0.95);
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            max-width: 500px;
         }
         h1 {
             color: #E20074;
+            text-align: center;
             margin-bottom: 10px;
-            font-size: 28px;
+            font-size: 32px;
+            font-weight: 700;
         }
         h2 {
             color: #ffffff;
-            margin-bottom: 30px;
+            text-align: center;
+            margin-bottom: 40px;
             font-size: 18px;
             font-weight: normal;
+        }
+        .map-card {
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: transform 0.2s ease;
+        }
+        .map-card:hover {
+            transform: translateY(-2px);
+            border-color: #E20074;
+        }
+        .map-title {
+            color: #E20074;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .map-info {
+            color: #ccc;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .session-list {
+            margin: 10px 0;
+        }
+        .session-item {
+            background: rgba(0, 123, 255, 0.1);
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin: 5px 0;
+            border-left: 3px solid #007bff;
         }
         .map-link {
             display: inline-block;
             background: linear-gradient(135deg, #E20074, #ff4081);
             color: white;
             text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-size: 16px;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-size: 14px;
             font-weight: 600;
-            transition: transform 0.2s ease;
-            margin: 10px;
+            transition: all 0.2s ease;
         }
         .map-link:hover {
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, #ff4081, #E20074);
             box-shadow: 0 4px 15px rgba(226, 0, 116, 0.4);
         }
-        .info {
-            margin-top: 30px;
-            color: #888;
-            font-size: 14px;
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 12px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>VICAR</h1>
-        <h2>Mission Maps</h2>
+        <h2>AUV Mission Maps</h2>
         
-        <a href="AUV_mission_map_20250912_225814.html" class="map-link">
-            View Latest Mission Map
-        </a>
+
+        <div class="map-card">
+            <div class="map-title">session_0076</div>
+            <div class="map-info">
+                <strong>Mission Date:</strong> 2025-08-29 20:12 UTC<br>
+                <strong>File Created:</strong> 2025-09-12 23:14
+            </div>
+            
+            <div class="session-list">
+
+                <div class="session-item">
+                    <strong>session_0076:</strong> surveynumber2_lawnmower<br>
+                    <small>Fri Aug 29 20:12:52 2025</small>
+                </div>
+
+            </div>
+            
+            <a href="AUV_mission_map_20250912_231428.html" class="map-link">View Mission Map</a>
+        </div>
+
+        <div class="map-card">
+            <div class="map-title">session_0079, session_0081, session_0083</div>
+            <div class="map-info">
+                <strong>Mission Date:</strong> 2025-09-11 20:03 UTC<br>
+                <strong>File Created:</strong> 2025-09-12 22:58
+            </div>
+            
+            <div class="session-list">
+
+                <div class="session-item">
+                    <strong>session_0079:</strong> surveynumber2_lawnmower<br>
+                    <small>Thu Sep 11 20:03:06 2025</small>
+                </div>
+
+                <div class="session-item">
+                    <strong>session_0081:</strong> Upath_rangekey<br>
+                    <small>Thu Sep 11 20:26:19 2025</small>
+                </div>
+
+                <div class="session-item">
+                    <strong>session_0083:</strong> surveynumber2_lawnmower<br>
+                    <small>Thu Sep 11 20:44:00 2025</small>
+                </div>
+
+            </div>
+            
+            <a href="AUV_mission_map_20250912_225814.html" class="map-link">View Mission Map</a>
+        </div>
+
         
-        <div class="info">
-            Interactive satellite mapping for autonomous underwater vehicle missions
+        <div class="footer">
+            Generated: 2025-09-12 23:14:33<br>
+            VICAR Autonomous Research Lab
         </div>
     </div>
 </body>
