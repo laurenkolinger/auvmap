@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VICAR Mission Maps</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            margin: 0;
+            padding: 40px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: rgba(15, 15, 15, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 {
+            color: #E20074;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .map-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #E20074, #ff4081);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.2s ease;
+            margin: 10px;
+        }
+        .map-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(226, 0, 116, 0.4);
+        }
+        .info {
+            margin-top: 30px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>VICAR</h1>
+        <h2>Mission Maps</h2>
+        
+        <a href="AUV_mission_map_20250912_225814.html" class="map-link">
+            View Latest Mission Map
+        </a>
+        
+        <div class="info">
+            Interactive satellite mapping for autonomous underwater vehicle missions
+        </div>
+    </div>
+</body>
+</html>
