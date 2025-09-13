@@ -1,0 +1,2 @@
+Comparison,Mean_Distance_m,RMS_Distance_m,Max_Distance_m,Std_Distance_m,Percentile_95_m,Mean_Depth_Diff_m,Mean_Heading_Diff_deg
+session_0079_vs_session_0083,0.1880741984653751,0.2120515545763589,0.7738680942775921,0.09847964164456842,0.24616523940166635,0.02741935483870969,1.7817204301075253

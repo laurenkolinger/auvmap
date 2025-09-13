@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VICAR Mission Maps</title>
+    <title>VICAR AUV Mission Dashboard</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,7 +15,7 @@
             min-height: 100vh;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             background: rgba(15, 15, 15, 0.95);
             padding: 40px;
@@ -34,11 +34,19 @@
         h2 {
             color: #ffffff;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-size: 18px;
             font-weight: normal;
         }
-        .map-card {
+        h3 {
+            color: #E20074;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            border-bottom: 2px solid #E20074;
+            padding-bottom: 10px;
+        }
+        .card {
             background: rgba(30, 30, 30, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 8px;
@@ -46,17 +54,17 @@
             margin: 20px 0;
             transition: transform 0.2s ease;
         }
-        .map-card:hover {
+        .card:hover {
             transform: translateY(-2px);
             border-color: #E20074;
         }
-        .map-title {
+        .card-title {
             color: #E20074;
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 10px;
         }
-        .map-info {
+        .card-info {
             color: #ccc;
             font-size: 14px;
             margin-bottom: 15px;
@@ -71,7 +79,7 @@
             margin: 5px 0;
             border-left: 3px solid #007bff;
         }
-        .map-link {
+        .button {
             display: inline-block;
             background: linear-gradient(135deg, #E20074, #ff4081);
             color: white;
@@ -81,10 +89,18 @@
             font-size: 14px;
             font-weight: 600;
             transition: all 0.2s ease;
+            margin: 5px 10px 5px 0;
         }
-        .map-link:hover {
+        .button:hover {
             background: linear-gradient(135deg, #ff4081, #E20074);
             box-shadow: 0 4px 15px rgba(226, 0, 116, 0.4);
+        }
+        .button.secondary {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+        }
+        .button.secondary:hover {
+            background: linear-gradient(135deg, #0056b3, #007bff);
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
         }
         .footer {
             text-align: center;
@@ -92,19 +108,26 @@
             color: #666;
             font-size: 12px;
         }
+        .no-data {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>VICAR</h1>
-        <h2>AUV Mission Maps</h2>
+        <h2>AUV Mission Dashboard</h2>
         
+        <h3>Mission Maps</h3>
 
-        <div class="map-card">
-            <div class="map-title">session_0076</div>
-            <div class="map-info">
+        <div class="card">
+            <div class="card-title">session_0076</div>
+            <div class="card-info">
                 <strong>Mission Date:</strong> 2025-08-29 20:12 UTC<br>
-                <strong>File Created:</strong> 2025-09-12 23:14
+                <strong>Created:</strong> 2025-09-12 23:14
             </div>
             
             <div class="session-list">
@@ -116,14 +139,33 @@
 
             </div>
             
-            <a href="AUV_mission_map_20250912_231428.html" class="map-link">View Mission Map</a>
+            <a href="AUV_mission_map_20250912_231428.html" class="button">View Mission Map</a>
         </div>
 
-        <div class="map-card">
-            <div class="map-title">session_0079, session_0081, session_0083</div>
-            <div class="map-info">
+        <div class="card">
+            <div class="card-title">session_0079</div>
+            <div class="card-info">
                 <strong>Mission Date:</strong> 2025-09-11 20:03 UTC<br>
-                <strong>File Created:</strong> 2025-09-12 22:58
+                <strong>Created:</strong> 2025-09-12 23:35
+            </div>
+            
+            <div class="session-list">
+
+                <div class="session-item">
+                    <strong>session_0079:</strong> surveynumber2_lawnmower<br>
+                    <small>Thu Sep 11 20:03:06 2025</small>
+                </div>
+
+            </div>
+            
+            <a href="AUV_mission_map_20250912_233531.html" class="button">View Mission Map</a>
+        </div>
+
+        <div class="card">
+            <div class="card-title">session_0079, session_0081, session_0083</div>
+            <div class="card-info">
+                <strong>Mission Date:</strong> 2025-09-11 20:03 UTC<br>
+                <strong>Created:</strong> 2025-09-12 22:58
             </div>
             
             <div class="session-list">
@@ -145,13 +187,62 @@
 
             </div>
             
-            <a href="AUV_mission_map_20250912_225814.html" class="map-link">View Mission Map</a>
+            <a href="AUV_mission_map_20250912_225814.html" class="button">View Mission Map</a>
+        </div>
+
+        <h3>Mission Analysis</h3>
+
+        <div class="card">
+            <div class="card-title">Analysis: session_0079</div>
+            <div class="card-info">
+                <strong>Created:</strong> 2025-09-12 23:35
+            </div>
+            
+            <div class="session-list">
+
+                <div class="session-item">
+                    <strong>session_0079:</strong> surveynumber2_lawnmower
+                </div>
+
+            </div>
+            
+            <a href="mission_analysis_20250912_233557.html" class="button secondary">View Analysis Plots</a>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Analysis: session_0076</div>
+            <div class="card-info">
+                <strong>Created:</strong> 2025-09-12 23:42
+            </div>
+            
+            <div class="session-list">
+
+                <div class="session-item">
+                    <strong>session_0076:</strong> surveynumber2_lawnmower
+                </div>
+
+            </div>
+            
+            <a href="mission_analysis_20250912_234210.html" class="button secondary">View Analysis Plots</a>
+        </div>
+
+        <h3>Mission Comparisons</h3>
+
+        <div class="card">
+            <div class="card-title">Comparison: session_0079, session_0083</div>
+            <div class="card-info">
+                <strong>Sessions Compared:</strong> 2<br>
+                <strong>Created:</strong> 2025-09-12 23:36
+            </div>
+            
+            <a href="mission_comparison_20250912_233603.html" class="button secondary">View Comparison</a>
         </div>
 
         
         <div class="footer">
-            Generated: 2025-09-12 23:14:33<br>
-            VICAR Autonomous Research Lab
+            VICAR AUV Mission Dashboard<br>
+            Generated: 2025-09-12 23:42:16<br>
+            Autonomous Underwater Vehicle Operations
         </div>
     </div>
 </body>
